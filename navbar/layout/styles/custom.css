@@ -1,0 +1,72 @@
+@charset "utf-8";
+@import url("fontawesome-4.5.0.min.css");
+@import url("framework.css");
+
+/* Rows*/
+.row1{border-bottom:1px solid;}
+/* Header*/
+#header #logo{margin:30px 0 0 0;}
+/* Navigation*/
+nav ul, nav ol{margin:0; padding:0;}
+
+#mainav .drop::after{position:absolute; font-family :"FontAwesome"; font-size:10px; line-height:10px;}
+
+/* Top Navigation */
+#mainav ul ul{position:absolute; width:180px;}
+#mainav ul ul ul{left:180px; top:0;}
+#mainav li{display:inline-block; position:relative; margin-right:30px;}
+#mainav li:last-child{margin-right:0;}
+#mainav li li{width:100%;}
+#mainav li a{display:block; padding:30px 0;}
+#mainav li li a{border:solid; border-width:0 0 1px 0;}
+#mainav .drop{padding-left:15px;}
+#mainav li li a, #mainav li li .drop{display:block; margin:0; padding:10px 15px;}
+#mainav .drop::after, #mainav li li .drop::after{content:"\f0d7";}
+#mainav .drop::after{top:35px; left:5px;}
+#mainav li li .drop::after{top:15px; left:5px;}
+#mainav ul ul{visibility:hidden; opacity:0;}
+#mainav ul li:hover > ul{visibility:visible; opacity:1;}
+
+#mainav form{display:none; margin:0; padding:0;}
+#mainav form select{width:100%; padding:5px; border:1px solid;}
+/* Colours
+--------------------------------------------------------------------------------------------------------------- */
+#navbar{background-color:#050505;}
+.overlay{color:white;}
+/* Navigation */
+#mainav li a{color:white;}
+#mainav .active a, #mainav a:hover, #mainav li:hover > a{color:#96B2B6; background-color:inherit;}
+#mainav li li a, #mainav .active li a{color:#FFFFFF; background-color:rgba(0,0,0,.6); border-color:rgba(0,0,0,.6);}
+#mainav li li:hover > a, #mainav .active .active > a{color:#FFFFFF; background-color:#96B2B6;}
+#mainav form select{color:#FFFFFF; background-color:#050505; border-color:rgba(255,255,255,.2);}
+
+/* Media Queries
+--------------------------------------------------------------------------------------------------------------- */
+@-ms-viewport{width:device-width;}
+
+
+/* Max Wrapper Width - Laptop, Desktop etc.
+--------------------------------------------------------------------------------------------------------------- */
+@media screen and (min-width:978px){
+	.hoc{max-width:978px;}
+}
+
+
+/* Mobile Devices
+--------------------------------------------------------------------------------------------------------------- */
+@media screen and (max-width:900px){
+	#header{padding:30px 0;}
+	#header #logo{margin:0;}
+	#mainav ul{display:none;}
+	#mainav form{display:block;}
+
+}
+
+
+@media screen and (max-width:750px){
+	.fl_left, .fl_right{display:block; float:none;}
+	
+	#header{text-align:center;}
+	#header #logo{margin-bottom:15px;}
+}
+

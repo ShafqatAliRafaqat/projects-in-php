@@ -1,0 +1,2 @@
+RewriteEngine on 
+RewriteRule ^user.html?$ /php/user/user.php [L]
